@@ -2,9 +2,10 @@
 
 ## ⚠️ The Human Cost of Logistics: The Efficiency Paradox
 
-In the relentless race for **"faster"** and **"cheaper,"** the global delivery market has stumbled into a dangerous **Efficiency Paradox**. While modern algorithms are masterfully optimized to shave off milliseconds and cents, they remain fundamentally "human-blind," *treating riders as static variables* rather than human workers with physiological limits. This oversight has fueled an under-addressed operational challenge: **a 70% to 100% annual turnover rate** that traps firms in a "revolving door" of recruitment, costing upwards of €5,000 per rider in lost productivity and training. Beyond the financial drain, the psychological toll is immense, **with 63% of riders reporting high distress**. When a system ignores the cumulative mental fatigue of its workforce, it doesn't just lose money—it inadvertently forces its most efficient people into a cumulative burnout risk cycle.
+In the relentless race for “faster” and “cheaper,” the food delivery market has entered a growing Efficiency Paradox. Delivery platforms increasingly rely on algorithmic systems to optimize speed, dispatching, route efficiency, and cost; however, these systems often remain “human-blind,” treating riders as operational variables rather than human workers with physiological and psychological limits. Recent rider-specific research shows why this matters. A 2025 survey of 953 food delivery riders found that burnout is widespread, with 73.9% experiencing moderate burnout and 21.9% experiencing high burnout. In a UK gig-economy survey, 47% of drivers and riders said time pressure could make them travel over the speed limit, and 30% reported running a red light under pressure. Beyond safety, job insecurity also affects workforce stability; recent UK research found that 75% of riders and drivers reported anxiety over potential income drops, while many spent unpaid time waiting for work through the app. For delivery companies, these are not only worker well-being issues. Fatigue, stress, and unsafe time pressure can translate into higher turnover, repeated recruitment and training costs, service-quality problems, accident exposure, and lower operational resilience. In other words, ignoring rider burnout may create short-term efficiency gains while increasing long-term workforce and operational costs.
 
-📍 This project is an AI-driven Decision Support System (DSS) designed to combat rider burnout and high labor turnover rates in the logistics sector. By integrating Machine Learning with industrial engineering principles, the system ensures sustainable delivery operations by prioritizing human resources.
+📍 This project is an AI-driven Decision Support System (DSS) designed to reduce delivery rider burnout risk and support more sustainable last-mile operations. By combining machine learning with industrial engineering principles, the system helps managers make workload-aware assignment decisions that consider not only delivery efficiency but also rider well-being and human-resource sustainability.
+
 
 ## 📊 Dataset
 This project uses synthetically generated logistics data to simulate delivery rider burnout risk. The target variable, Burnout_Score, is created using a rule-based formulation that combines shift duration, workload, traffic density, delivery delay, floor level, and elevator availability. Therefore, the model should be interpreted as a proof-of-concept Decision Support System rather than a clinically or operationally validated burnout prediction tool.
@@ -148,8 +149,11 @@ Gradio Decision Support Interface
 
 
 ### 📚 References
+- Dong, J., Zhang, G., & Wu, L. (2025). *Life against algorithmic management: a study on burnout and its influencing factors among food delivery riders*. Frontiers in Public Health, 13:1531541.  
+  https://doi.org/10.3389/fpubh.2025.1531541
 
-- World Economic Forum (2020): “The Future of the Last Mile Ecosystem”
-- Eurofound (2021): “Occupational Safety and Health in the Platform Economy”
-- Journal of Business Research: “The Impact of Time Pressure and Fatigue on Gig Worker Performance”
-- Statista (2023): “Logistics Personnel Turnover Trends in Europe”
+- Christie, N., & Ward, H. (2018). *The emerging issues for management of occupational road risk in a changing economy: A survey of gig economy drivers, riders and their managers*. UCL Centre for Transport Studies.  
+  https://discovery.ucl.ac.uk/id/eprint/10057417/
+
+- University of Cambridge. (2025). *Riders and drivers in the UK gig economy suffer anxiety over ratings and pay*.  
+  https://www.cam.ac.uk/stories/gig-economy-anxiety-ratings-pay
