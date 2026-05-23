@@ -45,7 +45,7 @@ I built an interface using **Gradio** to transform a complex backend model into 
 3. File Requirements
    Make sure the following files are in the same directory:
 
-   ` app.py ` (The main application script), ` the model.ipynb ` (The trained AI model)
+   ` app.py ` (The main application script), ` burnout_rf_model.pkl ` (The trained AI model)
 
 5. Running the App
    Execute the following command in your terminal:
