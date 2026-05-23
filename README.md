@@ -28,6 +28,21 @@ In the relentless race for **"faster"** and **"cheaper,"** the global delivery m
 | RMSE | ~2.1 points | On average, the prediction only deviates by ~2 points on a 100-point scale. |
 
 
+- The model is trained on the following features to predict the burnout risk of a rider:
+
+  Shift_Hour: The hour of the day the delivery is being made (capturing circadian rhythms and peak fatigue hours).
+
+  Cumulative_Deliveries: Total number of deliveries completed by the rider in the current shift.
+
+  Has_Elevator: A binary indicator (0 or 1) representing whether the delivery location has an elevator.
+
+  Building_Floor: The specific floor level of the delivery address.
+
+  Delay_From_Target_Min: The current time pressure, measured as minutes behind or ahead of the scheduled delivery time.
+
+  Traffic_Density_Low: One-hot encoded variable representing low traffic conditions.
+
+  Traffic_Density_Medium: One-hot encoded variable representing moderate traffic conditions.
 
 ### 🖥️ User Interface (Gradio UI)
 I built an interface using **Gradio** to transform a complex backend model into a functional, real-time Decision Support System (DSS). The dashboard allows non-technical individuals to input operational variables—such as building floor, elevator availability, and time pressure—and instantly receive an AI-optimized rider recommendation. By visualizing the "burnout score" ranking, it transforms predictive data into a clear, actionable tool for sustainable labor management.
