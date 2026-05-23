@@ -64,22 +64,89 @@ I built an interface using **Gradio** to transform a complex backend model into 
 
 
 ## 🚀 Getting Started
-1. Installation
-   Open your terminal and run the following command to install all necessary libraries:
 
-   ` pip install gradio pandas joblib scikit-learn numpy `
+## How to Run the Project
 
-3. File Requirements
-   Make sure the following files are in the same directory:
+This repository does not include the trained model file (`burnout_rf_model.pkl`) due to file size limitations.  
+You can generate the model locally by running the training script.
 
-   ` app.py ` (The main application script), ` burnout_rf_model.pkl ` (The trained AI model)
+### 1. Clone the Repository
 
-5. Running the App
-   Execute the following command in your terminal:
+```bash
+git clone https://github.com/hafsaeskiyurt/delivery-person-burnout-prediction.git
+cd delivery-person-burnout-prediction
+```
 
-   ` python app.py `
+### 2. Create a Virtual Environment
+For Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-👉 Once the script is running, the terminal will provide a local URL. Copy and paste this address into your web browser to access the dashboard.
+For macOS/Linux:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Required Libraries
+```bash
+pip install -r requirements.txt
+```
+
+If `requirements.txt` is not available, install the required libraries manually:
+
+```bash
+pip install pandas numpy scikit-learn joblib gradio matplotlib
+```
+
+### 4. Train the Model
+Run the training script to train the Random Forest Regressor and generate the model file:
+```bash
+python train_model.py
+```
+
+After running this command, the following file will be created locally:
+
+```text
+burnout_rf_model.pkl
+```
+
+❗ This file is required for the Gradio application.
+
+### 5. Run the Gradio Application
+```bash
+python app.py
+```
+
+After running the command, Gradio will provide a local URL similar to:
+```text
+http://127.0.0.1:7860
+```
+
+Open this URL in your browser to use the burnout prediction interface.
+
+---
+
+## Project Workflow
+
+```text
+courier_data.csv
+        ↓
+train_model.py
+        ↓
+burnout_rf_model.pkl
+        ↓
+app.py
+        ↓
+Gradio Decision Support Interface
+```
+
+---
+
+
+
 
 
 ### 📚 References
