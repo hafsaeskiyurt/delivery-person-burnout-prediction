@@ -2,7 +2,7 @@
 
 ### ⚠️ The Human Cost of Logistics: The Efficiency Paradox
 
-In the relentless race for **"faster"** and **"cheaper,"** the global delivery market has stumbled into a dangerous **Efficiency Paradox**. While modern algorithms are masterfully optimized to shave off milliseconds and cents, they remain fundamentally "human-blind," *treating riders as static variables* rather than biological assets. This oversight has fueled a silent crisis: **a 70% to 100% annual turnover rate** that traps firms in a "revolving door" of recruitment, costing upwards of €5,000 per rider in lost productivity and training. Beyond the financial drain, the psychological toll is immense, **with 63% of riders reporting high distress**. When a system ignores the cumulative mental fatigue of its workforce, it doesn't just lose money—it inadvertently forces its most efficient people into a "death spiral" of burnout, ultimately destabilizing the entire supply chain and tripling the risk of operational accidents. 
+In the relentless race for **"faster"** and **"cheaper,"** the global delivery market has stumbled into a dangerous **Efficiency Paradox**. While modern algorithms are masterfully optimized to shave off milliseconds and cents, they remain fundamentally "human-blind," *treating riders as static variables* rather than human workers with physiological limits. This oversight has fueled an under-addressed operational challenge: **a 70% to 100% annual turnover rate** that traps firms in a "revolving door" of recruitment, costing upwards of €5,000 per rider in lost productivity and training. Beyond the financial drain, the psychological toll is immense, **with 63% of riders reporting high distress**. When a system ignores the cumulative mental fatigue of its workforce, it doesn't just lose money—it inadvertently forces its most efficient people into a cumulative burnout risk cycle.
 
 📍 This project is an AI-driven Decision Support System (DSS) designed to combat rider burnout and high labor turnover rates in the logistics sector. By integrating Machine Learning with industrial engineering principles, the system ensures sustainable delivery operations by prioritizing human resources.
 
@@ -10,27 +10,27 @@ In the relentless race for **"faster"** and **"cheaper,"** the global delivery m
 This project uses synthetically generated logistics data to simulate delivery rider burnout risk. The target variable, Burnout_Score, is created using a rule-based formulation that combines shift duration, workload, traffic density, delivery delay, floor level, and elevator availability. Therefore, the model should be interpreted as a proof-of-concept Decision Support System rather than a clinically or operationally validated burnout prediction tool.
 
 ### 🛠️ Machine Learning Methodology
-- **Model Choice:** Random Forest Regresson
+- **Model Choice:** Random Forest Regressor
   - While I tested multiple models, the Random Forest Regressor was selected as the core engine.
 
  
 - **Feature Scaling:**
-  - You might notice that I did not apply Feature Scaling (like StandardScaler or MinMaxScaler).
+  - Feature scaling (like StandardScaler or MinMaxScaler) was not applied.
 
-    The Reason: Random Forest is an ensemble of Decision Trees. Unlike algorithms such as SVM or K-Nearest Neighbors, Tree-based models are scale-invariant. They split data based on thresholds, so the magnitude of the features (e.g., Shift Hour vs. Cumulative Deliveries) does not negatively impact the model's accuracy. Skipping unnecessary scaling keeps the model more interpretable and faster to deploy. Why? Logistics data is often non-linear and complex. Random Forest excels at capturing interactions between features (e.g., how the lack of an elevator in a high-floor building increases burnout faster than just a long shift). It achieved a significantly higher R<sup>2</sup> score (~0.92) compared to Linear Regression.
+    *The Reason:* Random Forest is an ensemble of Decision Trees. Unlike algorithms such as SVM or K-Nearest Neighbors, Tree-based models are scale-invariant. They split data based on thresholds, so the magnitude of the features (e.g., Shift Hour vs. Cumulative Deliveries) does not negatively impact the model's accuracy. Skipping unnecessary scaling keeps the model more interpretable and faster to deploy. Why? Logistics data is often non-linear and complex. Random Forest excels at capturing interactions between features (e.g., how the lack of an elevator in a high-floor building increases burnout faster than just a long shift). It achieved a significantly higher R<sup>2</sup> score (~0.92) compared to Linear Regression.
 
 
 - **Error Metric:** RMSE over MAE
   - I prioritized Root Mean Squared Error (RMSE) for evaluating model performance.
 
-  The Reason: In a human-centric system, large errors are much more dangerous than small ones. RMSE penalizes large outliers more heavily than Mean Absolute Error (MAE). If the model significantly underestimates a rider's burnout, it could lead to an unsafe assignment. RMSE ensures we minimize these high-risk errors to protect our staff.
+    *The Reason:* In a human-centric system, large errors are much more dangerous than small ones. RMSE penalizes large outliers more heavily than Mean Absolute Error (MAE). If the model significantly underestimates a rider's burnout, it could lead to an unsafe assignment. RMSE ensures we minimize these high-risk errors to protect our staff.
 
+The model explains about 95.17% of the variation in burnout scores. (R<sup>2</sup> Score) This indicates a very strong fit. On average, the model’s predictions are about 4.42 burnout-score points away from the actual values. (RMSE)
 
-
-| Metric | Result | Meaning |
+| Model | R<sup>2</sup> Score | RMSE |
 | :--- | :--- | :--- |
-| R2 Score | 0.9517 | The model explains about 95.17% of the variation in burnout scores. This indicates a very strong fit. |
-| RMSE | 4.42 | On average, the model’s predictions are about 4.42 points away from the actual values. |
+| Random Forest | 0.9517 | 4.42 |
+| Linear Regression | 0.7860 | 9.31 |
 
 
 - The model is trained on the following features to predict the burnout risk of a rider:
