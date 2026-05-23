@@ -1,15 +1,15 @@
 # Predictive Burnout Modeling for Delivery Riders:
 
-### ⚠️ The Human Cost of Logistics: The Efficiency Paradox
+## ⚠️ The Human Cost of Logistics: The Efficiency Paradox
 
 In the relentless race for **"faster"** and **"cheaper,"** the global delivery market has stumbled into a dangerous **Efficiency Paradox**. While modern algorithms are masterfully optimized to shave off milliseconds and cents, they remain fundamentally "human-blind," *treating riders as static variables* rather than human workers with physiological limits. This oversight has fueled an under-addressed operational challenge: **a 70% to 100% annual turnover rate** that traps firms in a "revolving door" of recruitment, costing upwards of €5,000 per rider in lost productivity and training. Beyond the financial drain, the psychological toll is immense, **with 63% of riders reporting high distress**. When a system ignores the cumulative mental fatigue of its workforce, it doesn't just lose money—it inadvertently forces its most efficient people into a cumulative burnout risk cycle.
 
 📍 This project is an AI-driven Decision Support System (DSS) designed to combat rider burnout and high labor turnover rates in the logistics sector. By integrating Machine Learning with industrial engineering principles, the system ensures sustainable delivery operations by prioritizing human resources.
 
-### 📊 Dataset
+## 📊 Dataset
 This project uses synthetically generated logistics data to simulate delivery rider burnout risk. The target variable, Burnout_Score, is created using a rule-based formulation that combines shift duration, workload, traffic density, delivery delay, floor level, and elevator availability. Therefore, the model should be interpreted as a proof-of-concept Decision Support System rather than a clinically or operationally validated burnout prediction tool.
 
-### 🛠️ Machine Learning Methodology
+## 🛠️ Machine Learning Methodology
 - **Model Choice:** Random Forest Regressor
   - While I tested multiple models, the Random Forest Regressor was selected as the core engine.
 
@@ -49,21 +49,19 @@ The model explains about 95.17% of the variation in burnout scores. (R<sup>2</su
 
   Traffic_Density_Medium: One-hot encoded variable representing moderate traffic conditions.
 
-### Feature Importance Table
+## Feature Importance Table
 
 The feature importance chart shows which operational variables had the strongest influence on the predicted burnout score.
 
 <img width="2366" height="1468" alt="image" src="https://github.com/user-attachments/assets/c5e9c3b8-7887-4703-8808-da6b9d2c902d" />
 
 
-### 🖥️ User Interface (Gradio UI)
+## 🖥️ User Interface (Gradio UI)
 I built an interface using **Gradio** to transform a complex backend model into a functional, real-time Decision Support System (DSS). The dashboard allows non-technical individuals to input operational variables—such as building floor, elevator availability, and time pressure—and instantly receive an AI-optimized rider recommendation. By visualizing the "burnout score" ranking, it transforms predictive data into a clear, actionable tool for sustainable labor management.
 
 <img width="1918" height="783" alt="image" src="https://github.com/user-attachments/assets/15d6737b-73c8-460a-aafe-8a0077bffd27" />
 
 
-
-## 🚀 Getting Started
 
 ## How to Run the Project
 
