@@ -35,19 +35,19 @@ The model explains about 95.17% of the variation in burnout scores. (R<sup>2</su
 
 - The model is trained on the following features to predict the burnout risk of a rider:
 
-  Shift_Hour: The hour of the day the delivery is being made (capturing circadian rhythms and peak fatigue hours).
+  `Shift_Hour:` The hour of the day the delivery is being made (capturing circadian rhythms and peak fatigue hours).
 
-  Cumulative_Deliveries: Total number of deliveries completed by the rider in the current shift.
+  `Cumulative_Deliveries:` Total number of deliveries completed by the rider in the current shift.
 
-  Has_Elevator: A binary indicator (0 or 1) representing whether the delivery location has an elevator.
+  `Has_Elevator:` A binary indicator (0 or 1) representing whether the delivery location has an elevator.
 
-  Building_Floor: The specific floor level of the delivery address.
+  `Building_Floor:` The specific floor level of the delivery address.
 
-  Delay_From_Target_Min: The current time pressure, measured as minutes behind or ahead of the scheduled delivery time.
+  `Delay_From_Target_Min:` The current time pressure, measured as minutes behind or ahead of the scheduled delivery time.
 
-  Traffic_Density_Low: One-hot encoded variable representing low traffic conditions.
+  `Traffic_Density_Low:` One-hot encoded variable representing low traffic conditions.
 
-  Traffic_Density_Medium: One-hot encoded variable representing moderate traffic conditions.
+  `Traffic_Density_Medium:` One-hot encoded variable representing moderate traffic conditions.
 
 ## Feature Importance Table
 
