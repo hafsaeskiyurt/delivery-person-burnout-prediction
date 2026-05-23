@@ -1,3 +1,5 @@
+# Predictive Burnout Modeling for Delivery Riders:
+
 ### ⚠️ The Human Cost of Logistics: The Efficiency Paradox
 
 In the relentless race for **"faster"** and **"cheaper,"** the global delivery market has stumbled into a dangerous **Efficiency Paradox**. While modern algorithms are masterfully optimized to shave off milliseconds and cents, they remain fundamentally "human-blind," *treating riders as static variables* rather than biological assets. This oversight has fueled a silent crisis: **a 70% to 100% annual turnover rate** that traps firms in a "revolving door" of recruitment, costing upwards of €5,000 per rider in lost productivity and training. Beyond the financial drain, the psychological toll is immense, **with 63% of riders reporting high distress**. When a system ignores the cumulative mental fatigue of its workforce, it doesn't just lose money—it inadvertently forces its most efficient people into a "death spiral" of burnout, ultimately destabilizing the entire supply chain and tripling the risk of operational accidents. 
