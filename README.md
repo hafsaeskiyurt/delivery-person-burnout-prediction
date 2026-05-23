@@ -6,6 +6,9 @@ In the relentless race for **"faster"** and **"cheaper,"** the global delivery m
 
 📍 This project is an AI-driven Decision Support System (DSS) designed to combat rider burnout and high labor turnover rates in the logistics sector. By integrating Machine Learning with industrial engineering principles, the system ensures sustainable delivery operations by prioritizing human resources.
 
+### 📊 Dataset
+This project uses synthetically generated logistics data to simulate delivery rider burnout risk. The target variable, Burnout_Score, is created using a rule-based formulation that combines shift duration, workload, traffic density, delivery delay, floor level, and elevator availability. Therefore, the model should be interpreted as a proof-of-concept Decision Support System rather than a clinically or operationally validated burnout prediction tool.
+
 ### 🛠️ Machine Learning Methodology
 - **Model Choice:** Random Forest Regresson
   - While I tested multiple models, the Random Forest Regressor was selected as the core engine.
@@ -26,8 +29,8 @@ In the relentless race for **"faster"** and **"cheaper,"** the global delivery m
 
 | Metric | Result | Meaning |
 | :--- | :--- | :--- |
-| R2 Score | ~0.92 | The model explains 92% of the variance in burnout scores. |
-| RMSE | ~2.1 points | On average, the prediction only deviates by ~2 points on a 100-point scale. |
+| R2 Score | 0.9517 | The model explains about 95.17% of the variation in burnout scores. This indicates a very strong fit. |
+| RMSE | 4.42 | On average, the model’s predictions are about 4.42 points away from the actual values. |
 
 
 - The model is trained on the following features to predict the burnout risk of a rider:
@@ -45,6 +48,13 @@ In the relentless race for **"faster"** and **"cheaper,"** the global delivery m
   Traffic_Density_Low: One-hot encoded variable representing low traffic conditions.
 
   Traffic_Density_Medium: One-hot encoded variable representing moderate traffic conditions.
+
+### Feature Importance Table
+
+The feature importance chart shows which operational variables had the strongest influence on the predicted burnout score.
+
+<img width="2366" height="1468" alt="image" src="https://github.com/user-attachments/assets/c5e9c3b8-7887-4703-8808-da6b9d2c902d" />
+
 
 ### 🖥️ User Interface (Gradio UI)
 I built an interface using **Gradio** to transform a complex backend model into a functional, real-time Decision Support System (DSS). The dashboard allows non-technical individuals to input operational variables—such as building floor, elevator availability, and time pressure—and instantly receive an AI-optimized rider recommendation. By visualizing the "burnout score" ranking, it transforms predictive data into a clear, actionable tool for sustainable labor management.
